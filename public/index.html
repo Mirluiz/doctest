@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #root {
+            width: 900px;
+            height: 600px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        #panel {
+            position: absolute;
+        }
+
+        #listcontainer {
+            position: absolute;
+            left: 0;
+            right: 50%;
+            bottom: 0;
+            top: 50%;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .list-item {
+            display: flex;
+            gap: 10px;
+            background: azure;
+        }
+
+        .list-item_delete {
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+    <div id="panel">
+        <div id="upper_panel">
+            <select id="selection">
+                <option value="box">Box</option>
+                <option value="sphere">Sphere</option>
+                <option value="cone">Cone</option>
+            </select>
+            <input id="scale" type="number" value="Add">
+            <input id="addbutton" type="button" value="Add">
+        </div>
+    </div>
+    <div id="listcontainer">
+        <div id="list">
+
+        </div>
+    </div>
+</div>
+<script type="module" src="bundle.js"></script>
+</body>
+</html>
